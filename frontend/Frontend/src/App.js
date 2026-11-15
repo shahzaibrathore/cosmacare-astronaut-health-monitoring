@@ -1,8 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-const API_BASE = 'http://127.0.0.1:8081';
-
+const API_BASE = process.env.REACT_APP_API_URL || 'http://127.0.0.1:8081';
 function App() {
   const [crew, setCrew] = useState([]);
   const [alerts, setAlerts] = useState([]);
