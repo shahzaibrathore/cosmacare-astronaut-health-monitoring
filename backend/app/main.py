@@ -1,4 +1,4 @@
-﻿"""FastAPI application entry point."""
+"""FastAPI application entry point."""
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -27,6 +27,7 @@ ALLOWED_ORIGINS = [
     "http://127.0.0.1:3001",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://cosmacare-frontend.vercel.app",
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -70,3 +71,5 @@ def health():
                 "database": "disconnected",
             },
         )
+
+
